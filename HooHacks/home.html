@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>HacksLogic</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("a").on('click', function(event) {
+
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 1000, function(){
+
+              window.location.hash = hash;
+            });
+          }
+        });
+      });
+    </script>
+
+</head>
+<body>
+    <style>
+        body{
+            background-color: #1C1C23;
+        }
+    </style>
+    <script src='script.js'></script>
+
+    <ul>
+        <li style="float:right"><a class="active" href="#hero">Home</a></li>
+        <li><a href="lessons.html">Lessons</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <!--Hero Section-->
+    <section id = "hero">
+        <div class="hero container">
+            <div>
+                <h1>Hacks<span>Logic</span></h1>
+                <a href="lessons.html" type="button" class="cta">Lessons</a>
+            </div>
+        </div>
+    </section>
+    <!--End Hero Section-->
+    
+    <!--About Section-->
+    <section id = "about">
+        <div class="about container">
+            <div class="about-top">
+                <h1 class="section-title">Ab<span>o</span>ut Us</h1>
+            </div>
+            <p>We are a group of highschool students looking to educate aspiring hackers. Hackathons are huge events with tons of people, it can be overwhelming. We decided to create HacksLogic to help poeple understand how to approach hackathons. With our advanced tips you will find yourself winning in no time!</p>
+            <div class="about-bottom">
+                <div class="about-item">
+                    <div class="icon">
+                      <img src="https://img.icons8.com/color/48/000000/css-filetype.png"/>
+                    </div>
+                    <h2>Aarnav Sachidanandan</h2>
+                    <p>I am an aspiring student looking to create change in the world. I have experiance with HTML, CSS, and JS and am always looking to further my knowledge in these languages. I hope our website helps you become a better hacker!</p>
+                </div>
+            </div>
+            <div class="about-bottom">
+                <div class="about-item">
+                    <div class="icon">
+                      <img src="https://img.icons8.com/color/48/000000/html-filetype.png"/>
+                    </div>
+                    <h2>Ishan Chenthooran</h2>
+                    <p> Hi, My name is Ishan Chenthooran. I am a sixteen year old highschool student currently studying at Our Lady Queen of the World Catholic Academy. I have always been interested in innovation and technology and recently got into programming while moving through high school. In the future I hope to further develop my skill set as far as programming and technology so that I can use it to make a difference in the world.
+                    </p>
+                </div>
+            </div>
+            <div class="about-bottom">
+                <div class="about-item">
+                    <div class="icon">
+                      <img src="https://img.icons8.com/color/60/000000/python.png"/>
+                    </div>
+                    <h2>Pragieth Suresh</h2>
+                    <p>Hi, My name is Pragieth. I am a sixteen year old highschool student currently studying at Bur Oak Secondary School. I've had a passion for robotics since I was a kid, and I'm now pursuing it. Python is one of my favourite programming languages because It has allowed me to write a language most people don’t know. I hope I can develop a better understanding of robotics and change the world with the power of robotics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End About Section-->
+
+    <!--Contact Section-->
+    <section id="contact">
+        <div><h1 class="section-title">Contact <span>Info</span></h1></div>
+        <div class="contact container">
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="icon"><img src="https://img.icons8.com/bubbles/50/000000/phone.png"/></div>
+            <div class="contact-info">
+              <h1>Phone</h1>
+              <h2>647 984 6300</h2>
+              <h2>+1 647 984 6300</h2>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon"><img src="https://img.icons8.com/bubbles/50/000000/important-mail.png"/></div>
+            <div class="contact-info">
+              <h1>Email</h1>
+              <h2>hackathonlearner@gmail.com</h2>
+              <h2>hlhelp@gmail.com</h2>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon"><img src="https://img.icons8.com/bubbles/50/000000/map-marker.png"/></div>
+            <div class="contact-info">
+              <h1>Location</h1>
+              <h2>Ontario,</h2>
+              <h2>Canada</h2>
+            </div>
+          </div>
+        </div>
+    </div>
+      </section>
+    <!--End Contact Section-->
+
+</body>
+</html>

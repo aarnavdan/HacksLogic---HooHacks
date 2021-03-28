@@ -1,0 +1,528 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container2{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p{
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    width: 90%;
+}
+.section-title{
+    font-size: 5rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+.section-title span{
+    color: crimson;
+}
+.cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+.cta:hover {
+    color: white;
+    background-color: crimson;
+}
+button{
+    margin-top: 100px;
+}
+/* Navigation Bar */
+ul{
+    overflow: hidden;
+    color: white;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.6rem;
+    background-position: cover;
+    background-color: black;
+    opacity: .85;
+    border: 2px solid crimson;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+li{
+    float: left;
+    display: inline;
+    text-align: center;
+    border-right: 2px solid crimson;
+}
+li:last-child{
+    border-bottom: none;
+}
+li a{
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: crimson;
+    color:white;
+}
+.active{
+    background-color: crimson;
+}
+/* End Navigation Bar */
+
+/* Hero Section */
+#hero{
+    background-image: url("https://www.highspot.com/wp-content/uploads/Hackathon-blog-header.png");
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .6;
+    z-index: -1;
+}
+#hero .hero{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+#hero h1{
+    color: white;
+    display: block;
+    width: fit-content;
+    font-size: 8rem;
+    position: relative;
+    letter-spacing: .3rem;
+}
+#hero span{
+    color: crimson;
+}
+/* End Hero Section */
+
+/* About Section */
+#about .about{
+    flex-direction: column;
+    text-align: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#about .section-title{
+    font-size: 5rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#about .section-title span{
+    color: crimson;
+}
+#about p{
+    color: white;
+}
+#about .about-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#about .about-item{
+    font-size: 1.2rem;
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url("https://code.visualstudio.com/assets/docs/languages/javascript/overview.png");
+    background-size: cover;
+    margin: 10px 5%;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+#about .about-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);;
+    opacity: .8;
+    z-index: -1;
+}
+.about .about-bottom .icon{
+    height: 30px;
+    width: 30px;
+    margin-bottom: 20px;
+}
+#about .about-bottom .icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#about .about-item h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#about .about-item p{
+    color: white;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+}
+/* End About Section */
+
+/* Contact Section */
+#contact .contact{
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#contact .contact-items{
+    width: 400px;
+    align-items: center;
+}
+#contact .contact-item{
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+#contact .icon{
+    width: 70px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+#contact .contact-info h1{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+#contact .contact-info h2{
+    font-size: 1.3rem;
+    line-height: 2rem;
+    font-weight: 500;
+}
+/* End Contact Section */
+
+/* Lessons Section */
+#lessons .leasons{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#lessons .leason-header h1{
+    margin-bottom: 50px;
+}
+#lessons .all-lessons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#lessons .lesson-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 85%;
+    margin: 60px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: -40px;
+}
+#lessons .lesson-info{
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    color:white;
+}
+#lessons .lesson-info h1{
+    font-size: 4rem;
+    font-weight: 300;
+}
+#lessons .lesson-info h2{
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-top:20px;
+}
+#lessons .lesson-info p{
+    color: white;
+    margin-top: 20px
+}
+#lessons .lesson-img {
+    flex-basis: 50%;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#lessons .lesson-img:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    opacity: .7;
+}
+#lessons .lesson-img img{
+    transition: .3s ease transform;
+}
+#lessons .lesson-item:hover .lesson-img img{
+    transform: scale(1.1);
+}
+/* End Lessons Section */
+
+/* Lesson 1 */
+#l1 h1{
+    font-size: 5rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+    text-align: center; 
+}
+#l1 .all-l1{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+#l1 .l1-info h1{
+    text-align: center;
+    font-size: 4rem;
+}
+#l1 .l1-info p{
+    font-size: 1.4rem;
+    margin-left: 20px;
+}
+#l1 .l1-info{
+    margin-bottom: 40px;
+}
+#l1 .l1-img{
+    border: 2px solid crimson;
+    border-radius: 15px;  
+    width: 80%;
+    margin: 10px;
+    flex-basis: 50%;
+    height: 300px;
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+}
+#l1 .l1-img:hover{
+    transform: scale(1.1);
+}
+#l1 .l1-img:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+/* End Lesson 1 */
+
+/* Lesson 2 */
+#l2 .l2-items{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+}
+#l2 .l2-item{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 85%;
+    height: 100%;
+    margin: 60px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: -40px;
+    padding: 30px;
+    flex-basis: 50%;
+    align-items: flex-start;
+    background-color: white;
+    color:white;
+}
+#l2 h1{
+    font-size: 5rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+    text-align: center; 
+}
+#l2 h2{
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    color: black;
+}
+#l2 p{
+    color: black;
+}
+#l2 h3{
+    font-size: 1.6rem;
+    font-weight: 200;
+    letter-spacing: .15rem;
+    color: white;
+    text-align: center;
+}
+/* End Lesson 2 */
+
+/* Game */
+#game .game{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: -40px;
+    padding: 65px;
+    flex-basis: 50%;
+    align-items: flex-start;
+    background-color: #333;
+    color:white;
+}
+#game .text{
+    font-size: 1.6rem;
+    font-weight: 200;
+    letter-spacing: .15rem;
+    color: white;
+    text-align: center;
+}
+#game h1{
+    color: white;
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    letter-spacing: .3rem; 
+}
+#game .grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
+    margin-top: 30px;
+
+}
+#game .cta{
+    margin-top: 0;
+}
+#game h2{
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: .2rem;
+    color: white;
+}
+#game button {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid crimson;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+  
+#game button:hover {
+    background-color: grey;
+}
+  
+#game #correct:active {
+    background-color: green;
+}
+  
+#game #wrong:active {
+    background-color: red;
+}
+/* End Game */
